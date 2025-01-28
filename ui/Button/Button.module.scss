@@ -1,0 +1,72 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+
+    &.fullWidth {
+        width: 100%;
+    }
+}
+
+.primary {
+    background: rgb(var(--accent));
+    color: var(--background-secondary);
+
+    &.destroying {
+        background: rgb(var(--error));
+    }
+}
+
+.secondary {
+    // background: #000;
+
+    &.destroying {
+        background: rgba(var(--error), 0.1);
+        color: rgb(var(--error));
+        border: 1px solid rgba(var(--error), 0.3);
+    }
+}
+
+.tertiary {
+    background: transparent;
+    color: rgb(var(--accent));
+    &:active {
+        background: rgba(var(--accent), 0.1);
+    }
+    &.destroying {
+        color: rgb(var(--error));
+        &:active {
+            background: rgba(var(--error), 0.1);
+        }
+    }
+}
+
+@mixin icon($size: 24px) {
+    width: $size;
+    height: $size;
+}
+
+.md {
+    height: 44px;
+    padding-inline: 1rem;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    font-size: 1rem;
+
+    svg {
+        @include icon(1rem);
+    }
+}
+
+.sm {
+    height: 2rem;
+    gap: 0.25rem;
+    border-radius: 6px;
+    padding-inline: 8px;
+    font-size: 14px;
+    svg {
+        @include icon(18px);
+    }
+}

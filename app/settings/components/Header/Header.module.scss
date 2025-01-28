@@ -1,0 +1,19 @@
+.component {
+    height: 3.5rem;
+    background: var(--background-secondary);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: clamp(2rem, 6vw, 6rem);
+
+    .container {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        .title {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}

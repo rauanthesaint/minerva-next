@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
-import './globals.css'
+
+import './_globals.scss'
+import './_normalize.scss'
+import './_typography.scss'
 
 export const metadata: Metadata = {
     title: 'Create Next App',

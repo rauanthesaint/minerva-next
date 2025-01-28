@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --background: #f2f2f7;
+    --foreground: #090909;
+    --background-secondary: #ffffff;
+    --border: #e5e5ea;
+
+    --foreground-muted: #999999;
+    --accent: 0, 122, 255;
+    --error: 239, 68, 68;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+}
+
+$container-max-width: 1280px;
+@mixin container($pref: 95%, $max: $container-max-width) {
+    width: min($pref, $max);
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+}
+
+.container {
+    @include container();
+}
+
+.container-min {
+    @include container($max: 480px);
+}

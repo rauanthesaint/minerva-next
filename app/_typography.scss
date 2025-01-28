@@ -1,0 +1,33 @@
+h1 {
+    margin-bottom: 20px;
+}
+
+.heading {
+    &.md {
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+.label {
+    font-size: 1rem;
+
+    &.sm {
+        font-size: 14px;
+    }
+    &.xs {
+        font-size: 12px;
+    }
+}
+
+.muted {
+    color: var(--foreground-muted);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalized {
+    text-transform: capitalize;
+}

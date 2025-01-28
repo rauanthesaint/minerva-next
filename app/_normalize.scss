@@ -1,0 +1,45 @@
+@mixin inputNormalize {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    @include inputNormalize();
+}
+
+input {
+    @include inputNormalize();
+    height: 100%;
+    width: 100%;
+}
+
+textarea {
+    @include inputNormalize();
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+svg {
+    flex-shrink: 0;
+    $size: 24px;
+    width: $size;
+    height: $size;
+}

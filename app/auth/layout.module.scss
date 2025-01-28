@@ -1,0 +1,12 @@
+@mixin flex-container($gap: 2rem) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+.form {
+    @include flex-container();
+    .block {
+        @include flex-container(1rem);
+    }
+}
