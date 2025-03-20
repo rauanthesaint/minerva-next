@@ -8,7 +8,7 @@ export default function Page() {
             <div className={s.block}>
                 <Link href={'/auth/sign-in'}>Sign In</Link>
                 <Link href={'/auth/sign-up'}>Sign Up</Link>
-                <Link href={'/profile'}>Profile</Link>
+                <Link href={'/settings'}>Profile</Link>
             </div>
         </main>
     )

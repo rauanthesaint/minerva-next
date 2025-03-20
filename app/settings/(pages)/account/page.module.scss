@@ -1,0 +1,35 @@
+$spacing: 0.75rem; /* ~12px */
+$border-radius: 0.75rem; // ~12px
+
+@mixin block() {
+    background-color: rgb(var(--background-secondary));
+    border-radius: $border-radius;
+    border: 1px solid rgb(var(--border-secondary));
+}
+
+.content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .block {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        .options_list {
+            @include block();
+        }
+    }
+}
+
+.inputContainer {
+    @include block();
+
+    & > *:not(:last-child) {
+        border-bottom: 1px solid rgb(var(--border-secondary));
+    }
+
+    .input {
+        padding: 8px 14px;
+    }
+}

@@ -12,7 +12,7 @@
 
 .primary {
     background: rgb(var(--accent));
-    color: var(--background-secondary);
+    color: rgb(var(--background-secondary));
 
     &.destroying {
         background: rgb(var(--error));

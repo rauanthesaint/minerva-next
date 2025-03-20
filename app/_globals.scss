@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --background: #f2f2f7;
-    --foreground: #090909;
-    --background-secondary: #ffffff;
-    --border: #e5e5ea;
+    --color-zinc-50: 250, 250, 250;
+    --color-zinc-100: 244, 244, 245;
+    --color-zinc-200: 228, 228, 231;
+    --color-zinc-300: 212, 212, 216;
+    --color-zinc-400: 161, 161, 170;
+    --color-zinc-500: 113, 113, 122;
+    --color-zinc-600: 82, 82, 91;
+    --color-zinc-700: 63, 63, 70;
+    --color-zinc-800: 39, 39, 42;
+    --color-zinc-900: 24, 24, 27;
+    --color-zinc-950: 9, 9, 11;
 
-    --foreground-muted: #999999;
-    --accent: 0, 122, 255;
+    --foreground-muted: var(--color-zinc-400);
+    --background: var(--color-zinc-50);
+    --background-secondary: 255, 255, 255;
+    --background-tertiary: var(--color-zinc-100);
+    --border-secondary: var(--color-zinc-100);
+    --border: var(--color-zinc-200);
+    --accent: 59, 130, 246;
     --error: 239, 68, 68;
 }
 
@@ -19,8 +31,8 @@ body {
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
+    color: rgb(var(--foreground));
+    background: rgb(var(--background));
 }
 
 $container-max-width: 1280px;
@@ -36,5 +48,5 @@ $container-max-width: 1280px;
 }
 
 .container-min {
-    @include container($max: 480px);
+    @include container($max: 425px);
 }

@@ -1,0 +1,23 @@
+.layout {
+    display: block;
+    & > div {
+        & > aside {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .layout {
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        & > div {
+            display: flex;
+            & > aside {
+                width: 16rem;
+                display: block;
+            }
+        }
+    }
+}

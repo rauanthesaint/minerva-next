@@ -3,6 +3,10 @@ h1 {
 }
 
 .heading {
+    &.lg {
+        font-size: 32px;
+        font-weight: 700;
+    }
     &.md {
         font-size: 24px;
         font-weight: 600;
@@ -11,6 +15,11 @@ h1 {
 
 .label {
     font-size: 1rem;
+
+    &.lg {
+        font-size: 18px;
+        font-weight: 500;
+    }
 
     &.sm {
         font-size: 14px;
@@ -21,7 +30,7 @@ h1 {
 }
 
 .muted {
-    color: var(--foreground-muted);
+    color: rgb(var(--foreground-muted));
 }
 
 .uppercase {
@@ -30,4 +39,8 @@ h1 {
 
 .capitalized {
     text-transform: capitalize;
+}
+
+.centered {
+    text-align: center;
 }

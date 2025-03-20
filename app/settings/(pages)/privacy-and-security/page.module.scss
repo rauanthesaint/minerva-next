@@ -1,0 +1,23 @@
+$spacing: 0.75rem; /* ~12px */
+$border-radius: 0.75rem; // ~12px
+
+@mixin block() {
+    background-color: rgb(var(--background-secondary));
+    border: 1px solid rgb(var(--border-secondary));
+}
+
+.content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .block {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        .options_list {
+            @include block();
+            border-radius: $border-radius;
+        }
+    }
+}

@@ -22,7 +22,6 @@ export default function Page() {
     })
 
     const onSubmit = async (data: Values) => {
-        // console.log('Form Submitted:', data)
         try {
             const result = await axios.post(
                 'http://localhost:3001/api/user',
@@ -32,7 +31,7 @@ export default function Page() {
                 }
             )
             if (result.status === 201) {
-                router.push('/profile')
+                router.push('/auth/otp-verification')
             }
         } catch (error) {
             console.error(error)

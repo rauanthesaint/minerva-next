@@ -1,0 +1,59 @@
+$spacing: 0.75rem; /* ~12px */
+$border-radius: 0.75rem; // ~12px
+
+@mixin block() {
+    background-color: rgb(var(--background-secondary));
+    border: 1px solid rgb(var(--border-secondary));
+}
+
+.profile_card {
+    padding: $spacing;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    gap: $spacing;
+
+    margin-top: 2rem;
+
+    @include block();
+    .profile_card_picture {
+        $size: 4rem; /* ~48px */
+        width: $size;
+        place-items: center;
+
+        background-color: rgb(var(--background-tertiary));
+        border-radius: 50%;
+        border: 1px solid rgb(var(--border));
+
+        display: grid;
+        place-content: center;
+        aspect-ratio: 1;
+
+        img {
+            $image-size: $size - 1.2rem /* ~28.8px */;
+            width: $image-size;
+            height: $image-size;
+        }
+    }
+
+    .profile_card_details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.125rem /* ~2px */;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .block {
+        .options_list {
+            @include block();
+            margin-top: 0.25rem;
+            border-radius: $border-radius;
+        }
+    }
+}

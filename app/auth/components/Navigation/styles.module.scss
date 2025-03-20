@@ -1,0 +1,30 @@
+@import '../../../globals';
+
+.component {
+    @include container(100%, 16rem);
+    background: var(--background-tertiary);
+    padding: 4px;
+
+    border-radius: 8px;
+
+    display: flex;
+    gap: 4px;
+
+    margin-top: 2rem;
+
+    .item {
+        width: 100%;
+
+        &.active {
+            background: var(--background-secondary);
+        }
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 2rem;
+
+        border-radius: 4px;
+    }
+}
